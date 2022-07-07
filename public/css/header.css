@@ -4,15 +4,13 @@ header{
     background-color: var(--colorNaranja);
 }
 header .top{
-    max-height: 80px;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 header .logo{
     width: 50%;
-    display: flex;
-    align-items: center;
 }
 header img{
     padding: 10px;
@@ -41,4 +39,30 @@ header nav a{
     color: white;
     text-transform: uppercase;
     font-size: 18px;
+}
+@media (min-width: 769px) {
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+
+    }
+    header img{
+        padding: 10px;
+        width: 35%;
+    }
+    header .burger {
+        display: none;
+    }
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        justify-content: flex-end;
+    
+    }
+    header nav ul li {
+        padding: 0 10px
+    }
 }

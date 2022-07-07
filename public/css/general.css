@@ -11,6 +11,8 @@ a{
     color: black;
 }
 .home {
+    margin: 0 auto;
+    max-width: 1440px;
     background-image: url(../images/bg-2.png);
     font-family:var(--fuente);
 }
