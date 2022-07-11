@@ -4,19 +4,19 @@ header{
     background-color: var(--colorNaranja);
 }
 header .top{
-    max-height: 80px;
+    max-height:80px ;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 header .logo{
-    width: 50%;
     display: flex;
     align-items: center;
+    width: 50%;
 }
 header img{
     padding: 10px;
-    width: 75%;
+    width: 150px;
 }
 header .burger{
     font-size: 30px;
@@ -27,9 +27,9 @@ header .burger{
     display: inline-block;
 }
 header nav{
+    display: none;
     margin-top: 20px;
     text-align: center;
-    display: none;
 }
 header nav ul{
     padding-bottom: 20px;
@@ -41,4 +41,36 @@ header nav a{
     color: white;
     text-transform: uppercase;
     font-size: 18px;
+}
+/* Desktop */
+@media (min-width:769px) {
+    header{
+        margin-top: 10px;
+        padding-right: 20px;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .top{
+        width: 10%;
+    }
+    header nav{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    header .burger{
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        justify-content: flex-end;
+    }
+    header nav ul li{
+        padding: 0 10px;
+    }
 }
