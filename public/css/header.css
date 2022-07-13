@@ -7,7 +7,7 @@ header .top{
     max-height:80px ;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 header .logo{
     display: flex;
@@ -18,7 +18,10 @@ header img{
     padding: 10px;
     width: 150px;
 }
-header .burger{
+header .burger label{
+    position: absolute;
+    top: 15px;
+    right: 10px;
     font-size: 30px;
     padding: 20px 30px;
     color: white;
@@ -26,7 +29,14 @@ header .burger{
     border-radius: 10px;
     display: inline-block;
 }
+header .burger input{
+    display: none;
+}
+header .burger input:checked ~ nav{
+    display: block;
+}
 header nav{
+    width: 100%;
     display: none;
     margin-top: 20px;
     text-align: center;
@@ -56,7 +66,7 @@ header nav a{
         width: 10%;
     }
     header nav{
-        width: 90%;
+        width: 80%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -67,10 +77,29 @@ header nav a{
     header nav ul{
         display: flex;
         flex-wrap: wrap;
-        width: 40%;
+        width: 49%;
+    }
+    header nav ul.menu{
+        width: 65%;
+        justify-content: flex-start;
+    }
+    header nav ul.user{
+        width: 30%;
         justify-content: flex-end;
     }
     header nav ul li{
+        padding: 0 5px;
+    }
+    header nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (min-width:1024px) {
+    header nav ul li{
         padding: 0 10px;
+    }
+    header nav ul li a{
+        font-size: 20px;
     }
 }
